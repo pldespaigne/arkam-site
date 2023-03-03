@@ -1,0 +1,16 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* html, body, #__next {
+  scroll-behavior: smooth;
+} */
+
+@font-face {
+  font-family: 'Futura';
+  src: 
+    url('/fonts/Futura-Light.woff') format('woff'),
+    url('/fonts/Futura-Light.woff2') format('woff2')
+  ;
+}
