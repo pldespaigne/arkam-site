@@ -35,7 +35,7 @@ const Residents: NextPage = () => {
           influence="Influences : Sefa, Dr. Peacok, Rayvolt, Crypton"
           descriptionDj="► Résident et co-créateur de ARKAM, Dr. Watzmann a pour ambition de surprendre l'auditeur au travers de sets énergiques, brutaux et mélodiques. Il a pour crédo de défier le public en lui transmettant son énergie infernale. D'humeur excessive, tout est dans la provocation et le non consenti. Ses influences musicales ne trouvent pas de stabilité tant qu'elles lui permettent de s’immiscer dans votre sauvagerie innée."
           boutonMusic="https://www.mixcloud.com/ARK_A_M/dr-watzmann-hiphop-murder/"
-          texteBouton="J'écoute un set de Dr Watzamm"
+          texteBouton="J'écoute un set de Dr Watzmann"
           reverse
         />
 
@@ -44,16 +44,19 @@ const Residents: NextPage = () => {
           nomDj="Makiae"
           styleMusic="Rave | Early hardstyle"
           influence="Influences : AnD, Rave Alert, Banzai Records, Insolent Rave Records, SAIKE"
-          descriptionDj="► Résident depuis les débuts d'ARKAM, Makiae a d'abord puisé ses influences dans une techno rapide et mélancolique. Ne laissant aucun genre de côté il trouve aujourd'hui son bonheur en s'inspirant des raves des 90's, de early hardstyle et de hard techno. Il souhaite aujourd'hui se détacher de la techno &quot;autoroute&quot; qu'il juge trop monotone et adore switcher subtilement (et parfois radicalement) entre les styles dans ses sets afin d'amener le public dans son univers."
+          descriptionDj="► DJ résident à ARKAM depuis leurs débuts, Makiae puise ses dernières inspirations à travers l’indus, la hard techno et le gabber. Il aime donner de l’énergie à travers ses sets grâce à des drops foudroyants et des sons percutants.
+          Entre sonorités aussi bien stridentes que mélodiques, le tout agrémenté par des puissants kicks, c’est un véritable cocktail explosif qu’il vous proposera à St So. On a hâte de le voir pour ce closing qui, on l’espère, ne vous laissera clairement pas indifférent !
+          soundcloud.com/makiae
+          "
           
           // TODO !!!!
           boutonMusic="https://www.mixcloud.com/ARK_A_M/dr-watzmann-hiphop-murder/"
-          texteBouton="J'écoute un set de Dr Watzamm"
+          texteBouton="J'écoute un set de Makiae"
         />
 
         <ResidentsCard
           faceDj="/images/max.png"
-          nomDj="Dr Watzmann"
+          nomDj="Neuronn"
           styleMusic="Euphoric Frenchcore"
           influence="Influences : Sefa, Dr. Peacok, Rayvolt, Crypton"
           descriptionDj="► Résident et co-créateur de ARKAM, Dr. Watzmann a pour ambition de surprendre l'auditeur au travers de sets énergiques, brutaux et mélodiques. Il a pour crédo de défier le public en lui transmettant son énergie infernale. D'humeur excessive, tout est dans la provocation et le non consenti. Ses influences musicales ne trouvent pas de stabilité tant qu'elles lui permettent de s’immiscer dans votre sauvagerie innée."
@@ -64,7 +67,7 @@ const Residents: NextPage = () => {
 
         <ResidentsCard
           faceDj="/images/max.png"
-          nomDj="Dr Watzmann"
+          nomDj="TeseracT"
           styleMusic="Euphoric Frenchcore"
           influence="Influences : Sefa, Dr. Peacok, Rayvolt, Crypton"
           descriptionDj="► Résident et co-créateur de ARKAM, Dr. Watzmann a pour ambition de surprendre l'auditeur au travers de sets énergiques, brutaux et mélodiques. Il a pour crédo de défier le public en lui transmettant son énergie infernale. D'humeur excessive, tout est dans la provocation et le non consenti. Ses influences musicales ne trouvent pas de stabilité tant qu'elles lui permettent de s’immiscer dans votre sauvagerie innée."
