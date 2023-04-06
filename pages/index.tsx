@@ -18,30 +18,30 @@ export default function Home() {
     <>
       <main className="relative" style={{ fontFamily: 'Futura' }}>
         <header className="fixed inset-x-0 z-10 text-white flex flex-row items-center gap-4 bg-black/40 backdrop-blur-lg px-40 py-4 border-b border-b-white/20">
-          <a href="#" className="flex items-center gap-4">
+          <Link href="#" className="flex items-center gap-4">
             <Image src="/logo.png" width="46" height="46" alt="Arkam Logo" />
             <p className="font-semibold text-xl">Musical Event and Digital Events</p>
-          </a>
+          </Link>
           {/* <Image src="/logo.png" width="46" height="46" alt="Arkam Logo" />
             <p className="font-semibold text-xl">Musical Event and Digital Events</p> */}
           <div className="grow" />
-          <a href="/#evenements" className="hover:underline" >Events</a>
-          <a href="/#projets" className="hover:underline">Projets</a>
-          <a href="/#poles" className="hover:underline">Pôles</a>
-          <a href="/#contact" className="hover:underline">Contact</a>
+          <Link href="/#evenements" className="hover:underline" >Events</Link>
+          <Link href="/#projets" className="hover:underline">Projets</Link>
+          <Link href="/#poles" className="hover:underline">Pôles</Link>
+          <Link href="/#contact" className="hover:underline">Contact</Link>
         </header>
 
 
         <footer className="fixed inset-x-0 z-10 bottom-0 text-white flex flex-row justify-center gap-8 bg-black/10 backdrop-blur-lg px-40 py-4 border-b border-b-white/20">
-          <a href="https://www.facebook.com/ARKAMLILLE/" target="_blank" rel="noreferrer">
+          <Link href="https://www.facebook.com/ARKAMLILLE/" target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={faFacebook} size="2x" />
-          </a>
-          <a href="https://www.instagram.com/arkamrecords/" target="_blank" rel="noreferrer">
+          </Link>
+          <Link href="https://www.instagram.com/arkamrecords/" target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={faInstagram} size="2x" />
-          </a>
-          <a href="https://soundcloud.com/arkamrecords" target="_blank" rel="noreferrer">
+          </Link>
+          <Link href="https://soundcloud.com/arkamrecords" target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={faSoundcloud} size="2x" />
-          </a>
+          </Link>
         </footer>
 
         <section
@@ -58,10 +58,10 @@ export default function Home() {
             </div>
           </Tilt>
 
-          <a href="/#asso" className="mt-16 text-white border border-white/20 rounded-md flex flex-row items-center gap-2 px-4 py-2 hover:bg-white/10 hover:scale-105 uppercase">
+          <Link href="/#asso" className="mt-16 text-white border border-white/20 rounded-md flex flex-row items-center gap-2 px-4 py-2 hover:bg-white/10 hover:scale-105 uppercase">
             <span>Decouvrir</span>
             <FontAwesomeIcon icon={faChevronDown} size="sm" />
-          </a>
+          </Link>
         </section>
 
         <section id="asso" className="bg-black px-40 pt-16 pb-24 text-white">
@@ -83,6 +83,7 @@ export default function Home() {
             elementWidth={240}
             elements={[
               <Event
+                key={0}
                 image="/images/varkam3.png"
                 title="Varkam #3"
                 date="24/09/2022"
@@ -91,6 +92,7 @@ export default function Home() {
                 description="Les patients de l'asyle ont été rassemblés pour un nouvel essai thérapeutique."
               />,
               <Event
+                key={0}
                 image="/images/vents.png"
                 title="Les Vents Contraires"
                 date="16/09/2022"
@@ -99,6 +101,7 @@ export default function Home() {
                 description="Nos scientifiques sont invités pour répendre leur thérapie."
               />,
               <Event
+                key={0}
                 image="/images/factory.png"
                 title="Factory"
                 date="27/08/2022"
@@ -107,6 +110,7 @@ export default function Home() {
                 description="Nos médecins conjuguent leurs savoirs pour une tri-thérapie."
               />,
               <Event
+                key={0}
                 image="/images/derdesraves.jpg"
                 title="La Der des Raves"
                 date="23/02/2022"
@@ -115,6 +119,7 @@ export default function Home() {
                 description="Patients fortement troublés par la perspective d'un changement de propriétaire, la dose de traitement a dû être doublée pour assurer un retour au calme."
               />,
               <Event
+                key={0}
                 image="/images/experience.jpg"
                 title="Arkam Experience"
                 date="13/11/2021"
@@ -123,6 +128,7 @@ export default function Home() {
                 description="Suite à la pandémie mondiale de Covid-19, le collectif s'est vu inviter pour soigner le manque de folie d'un millier de Lillois. Utilisation de la chloroquine inutile."
               />,
               <Event
+                key={0}
                 image="/images/event 2.jpg"
                 title="Backyard"
                 date="17/06/2021"
@@ -131,6 +137,7 @@ export default function Home() {
                 description="Nouvelle thérapie testée durant cette séance organisée dans les jardins de l'asile, d'autres sessions sont à prévoir."
               />,
               <Event
+                key={0}
                 image="/images/event 1.jpg"
                 title="LBAT w/ ARKAM"
                 date="09/10/2020"
@@ -139,6 +146,7 @@ export default function Home() {
                 description="Dernier souffle avant refermeture des bars, patients déchainés dans une cave sombre."
               />,
               <Event
+                key={0}
                 image="/images/event 3.png"
                 title="Silent Party"
                 date="06/03/2020"
@@ -147,6 +155,7 @@ export default function Home() {
                 description="Hypnose thérapeutique inoculée via un dispositif intra auriculaire. Bonne réaction des patients testés."
               />,
               <Event
+                key={0}
                 image="/images/room.jpg"
                 title="Arkam invite Jan Vercauteren (Rave Alert)"
                 date="05/03/2020"
@@ -155,6 +164,7 @@ export default function Home() {
                 description="Transformation d'un lieu de la nuit lilloise en ersatz d'asile Arkam. Collaboration avec Jan Vercauteren concluante."
               />,
               <Event
+                key={0}
                 image="/images/bny.jpg"
                 title="BNY ST SO UNDERRATED"
                 date="23/11/2019"
@@ -163,6 +173,7 @@ export default function Home() {
                 description="Notre résident BNY a sorti ses instruments afin de tester une nouvelle expérience en live."
               />,
               <Event
+                key={0}
                 image="/images/fetemu.jpg"
                 title="Braderie 2019"
                 date="31/08/2019"
@@ -171,6 +182,7 @@ export default function Home() {
                 description="Interventions de praticiens externes de la scène locale, sélectionné.e.s par l'équipe Arkam."
               />,
               <Event
+                key={0}
                 image="/images/karnage.png"
                 title="Karnage"
                 date="13/07/2019"
@@ -179,6 +191,7 @@ export default function Home() {
                 description="Première expérimentation visuelle avancée ; réaction positive des patients."
               />,
               <Event
+                key={0}
                 image="/images/asilomar.png"
                 title="Asilomar"
                 date="11/07/2019"
@@ -187,6 +200,7 @@ export default function Home() {
                 description="Pour appuyer les propos du colloque international: Ethique et transhumanisme. Hypnothérapie par visuel animé afin de capter l'auditoire."
               />,
               <Event
+                key={0}
                 image="/images/fetemu.jpg"
                 title="Fête de la musique"
                 date="21/06/2019"
@@ -195,6 +209,7 @@ export default function Home() {
                 description="Demande gouvernementale d'utiliser nos compétences pour soigner la population. Résultat concluant."
               />,
               <Event
+                key={0}
                 image="/images/Vakarm2.png"
                 title="Varkam #2"
                 date="20/04/2019"
@@ -203,6 +218,7 @@ export default function Home() {
                 description="Notre analyse est formelle : nos médecins sont suffisamment formés pour étendre notre champ d'action."
               />,
               <Event
+                key={0}
                 image="/images/future.png"
                 title="Shape the Future"
                 date="13/04/2019"
@@ -211,6 +227,7 @@ export default function Home() {
                 description="Investissement du lieu emblématique de la vie lilloise. Test de Résistance face à une percussion intense."
               />,
               <Event
+                key={0}
                 image="/images/nuit.png"
                 title="Les nuits de l'archi"
                 date="06/04/2019"
@@ -219,6 +236,7 @@ export default function Home() {
                 description="Première exportation de notre thérapie, qui prend une tournure Européenne."
               />,
               <Event
+                key={0}
                 image="/images/house.jpg"
                 title="In Da House"
                 date="05/04/2019"
@@ -227,6 +245,7 @@ export default function Home() {
                 description="Nouvelle médication qui a permis à la foule d'entrer en état de transe, possibilité d'élargir l'essai."
               />,
               <Event
+                key={0}
                 image="/images/asylum2.png"
                 title="Arkam Asylum #2"
                 date="02/03/2019"
@@ -235,6 +254,7 @@ export default function Home() {
                 description="Retour au labo souterrain principal pour un 2e essai."
               />,
               <Event
+                key={0}
                 image="/images/Varkam1.png"
                 title="Varkam #1"
                 date="01/02/2019"
@@ -243,6 +263,7 @@ export default function Home() {
                 description="La musique semble être efficace pour soulager les maux du quotidien de nos patients."
               />,
               <Event
+                key={0}
                 image="/images/asylum1.jpg"
                 title="Arkam Asylum #1"
                 date="13/10/2018"
@@ -352,25 +373,25 @@ export default function Home() {
           </p>
 
           <div className="flex flex-row justify-center">
-            <a href="mailto:contact.arkam@gmail.com" target="_blank" rel="noreferrer" className="mt-16 text-white border font-semibold border-white/40 rounded-md bg-black/50 backdrop-blur-lg flex flex-row items-center gap-3 px-8 py-4 hover:bg-white/10 hover:scale-105 uppercase">
+            <Link href="mailto:contact.arkam@gmail.com" target="_blank" rel="noreferrer" className="mt-16 text-white border font-semibold border-white/40 rounded-md bg-black/50 backdrop-blur-lg flex flex-row items-center gap-3 px-8 py-4 hover:bg-white/10 hover:scale-105 uppercase">
               <span>Contactez nous</span>
               <FontAwesomeIcon icon={faPaperPlane} />
-            </a>
+            </Link>
           </div>
 
           <div className="flex flex-row justify-center gap-10 mt-16">
 
-            <a href="https://www.facebook.com/ARKAMLILLE/" target="_blank" rel="noreferrer">
+            <Link href="https://www.facebook.com/ARKAMLILLE/" target="_blank" rel="noreferrer">
               <FontAwesomeIcon icon={faFacebook} size="4x" />
-            </a>
+            </Link>
 
-            <a href="https://www.instagram.com/arkamrecords/" target="_blank" rel="noreferrer">
+            <Link href="https://www.instagram.com/arkamrecords/" target="_blank" rel="noreferrer">
               <FontAwesomeIcon icon={faInstagram} size="4x" />
-            </a>
+            </Link>
 
-            <a href="https://soundcloud.com/arkamrecords" target="_blank" rel="noreferrer">
+            <Link href="https://soundcloud.com/arkamrecords" target="_blank" rel="noreferrer">
               <FontAwesomeIcon icon={faSoundcloud} size="4x" />
-            </a>
+            </Link>
           </div>
 
         </section>
@@ -380,9 +401,9 @@ export default function Home() {
           <p className="text-center text-xl mt-8">Notre association compte sur vous !</p>
 
           <div className="flex flex-row justify-center">
-            <a href="https://www.helloasso.com/associations/ark-a-m" target="_blank" rel="noreferrer" className="mt-8 text-white border font-semibold border-white rounded-md bg-black backdrop-blur-lg flex flex-row items-center gap-3 px-8 py-4 hover:bg-white/10 hover:scale-105 uppercase">
+            <Link href="https://www.helloasso.com/associations/ark-a-m" target="_blank" rel="noreferrer" className="mt-8 text-white border font-semibold border-white rounded-md bg-black backdrop-blur-lg flex flex-row items-center gap-3 px-8 py-4 hover:bg-white/10 hover:scale-105 uppercase">
               <span>Soutenez nous</span>
-            </a>
+            </Link>
           </div>
 
           <div className="flex flex-row justify-center mt-8">

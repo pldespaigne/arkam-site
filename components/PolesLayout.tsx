@@ -1,6 +1,7 @@
 import { faFacebook, faInstagram, faSoundcloud } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
+import Link from "next/link";
 import { FunctionComponent, ReactNode } from "react";
 
 interface PolesLayoutProps {
@@ -15,10 +16,10 @@ export const PolesLayout: FunctionComponent<PolesLayoutProps> = ({children}) => 
       <Image src="/logo.png" width="46" height="46" alt="Arkam Logo" />
       <p className="font-semibold text-xl">Musical Event and Digital Events</p>
       <div className="grow" />
-      <a href="/#evenements" className="hover:underline">Events</a>
-      <a href="/#projets" className="hover:underline">Projets</a>
-      <a href="/#poles" className="hover:underline">Pôles</a>
-      <a href="/#contact" className="hover:underline">Contact</a>
+      <Link href="/#evenements" className="hover:underline">Events</Link>
+      <Link href="/#projets" className="hover:underline">Projets</Link>
+      <Link href="/#poles" className="hover:underline">Pôles</Link>
+      <Link href="/#contact" className="hover:underline">Contact</Link>
     </header>
       {children}
   

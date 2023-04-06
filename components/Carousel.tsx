@@ -67,6 +67,7 @@ export const Carousel: FunctionComponent<CarouselProps> = ({ elements, elementWi
         {
           elements.map((_, index) =>
             <button
+              key={index}
               onClick={() => handleClick(index)}
               className={`rounded-full w-3 h-3 ${ count === index ? 'bg-white' : 'bg-white/20 hover:bg-white/50' }`}
             />
