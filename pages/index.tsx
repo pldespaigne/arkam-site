@@ -6,7 +6,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faInstagram, faSoundcloud } from '@fortawesome/free-brands-svg-icons';
 
-import { Tilt } from '@arkam/components/Tilt';
 import { Title } from '@arkam/components/Title';
 import { Event } from '@arkam/components/Event';
 import { Poles } from '@arkam/components/Poles';
@@ -18,18 +17,16 @@ export default function Home() {
   return (
     <>
       <main className="relative" style={{ fontFamily: 'Futura' }}>
-        <header className="fixed inset-x-0 z-10 text-white flex flex-row items-center gap-4 bg-black/40 backdrop-blur-lg px-40 py-4 border-b border-b-white/20">
-          <Link href="#" className="flex items-center gap-4">
+        <header className="fixed inset-x-0 z-10 text-white flex flex-row items-center gap-4 bg-black/60 backdrop-blur-lg px-40 py-4 border-b border-b-white/20">
+          <Link href="/" className="flex items-center gap-4" onClick={() => window.scrollTo({ top: 0 })}>
             <Image src="/logo.png" width="46" height="46" alt="Arkam Logo" />
-            <p className="font-semibold text-xl">Musical Event and Digital Events</p>
+            <p className="font-semibold text-xl">Musical Event and Digital Scenography</p>
           </Link>
-          {/* <Image src="/logo.png" width="46" height="46" alt="Arkam Logo" />
-            <p className="font-semibold text-xl">Musical Event and Digital Events</p> */}
           <div className="grow" />
-          <Link href="/#evenements" className="hover:underline" >Events</Link>
-          <Link href="/#projets" className="hover:underline">Projets</Link>
-          <Link href="/#poles" className="hover:underline">Pôles</Link>
-          <Link href="/#contact" className="hover:underline">Contact</Link>
+          <Link href="#evenements" scroll={false} className="hover:underline">Events</Link>
+          <Link href="#projets" scroll={false} className="hover:underline">Projets</Link>
+          <Link href="#poles" scroll={false} className="hover:underline">Pôles</Link>
+          <Link href="#contact" scroll={false} className="hover:underline">Contact</Link>
         </header>
 
 
@@ -50,26 +47,22 @@ export default function Home() {
           style={{ backgroundImage: 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 30%), url("/images/hero.jpg")' }}
         >
 
-          <Tilt angle="4">
-            <div className="px-8 pt-4 pb-6 bg-black/40 rounded-lg backdrop-blur-sm border border-white/20">
-              <h1 className="text-9xl uppercase text-white font-extrabold">Musical Events</h1>
-              <h2 className="text-right font-semibold text-5xl text-white">and Digital Scenography</h2>
-              <div className="border-b border-white pt-6" />
-              <p className="mt-6 text-white text-center text-xl">Arkam est une association de loi 1901 créée en 2017 par des adeptes de musique, d&apos;art visuel et de nouvelles technologies.</p>
-            </div>
-          </Tilt>
+          <div className="px-8 pt-4 pb-6 bg-black/60 rounded-lg backdrop-blur-sm border border-white/20">
+            <h1 className="text-9xl uppercase text-white font-extrabold">Musical Events</h1>
+            <h2 className="text-right font-semibold text-5xl text-white">and Digital Scenography</h2>
+            <div className="border-b border-white pt-6" />
+            <p className="mt-6 text-white text-center text-xl">Arkam est une association de loi 1901 créée en 2017 par des adeptes de musique, d&apos;art visuel et de nouvelles technologies.</p>
+          </div>
 
-          <Link href="/#asso" className="mt-16 text-white border border-white/20 rounded-md flex flex-row items-center gap-2 px-4 py-2 hover:bg-white/10 hover:scale-105 uppercase">
+          <Link href="/#asso" scroll={false} className="mt-16 text-white border border-white/20 rounded-md flex flex-row items-center gap-2 px-4 py-2 hover:bg-white/10 hover:scale-105 uppercase">
             <span>Decouvrir</span>
             <FontAwesomeIcon icon={faChevronDown} size="sm" />
           </Link>
         </section>
 
-        <section id="asso" className="bg-black px-40 pt-16 pb-24 text-white">
+        <section id="asso" className="bg-black px-40 pt-32 pb-44 text-white">
           <Title>L&apos;association</Title>
-
-          <p className="mt-8 text-white text-center">Notre association souhaite promouvoir les arts nouveaux qu&apos;ils soient sonores ou visuels. Le collectif constitué d&apos;ingénieurs, de graphistes, de développeurs ou scénographes nous permet des approches transversales et novatrices d&apos;événements. Car il n&apos;y a pas plus ennuyeux qu&apos;une nuit sans folie, le nom du collectif s&apos;inspire du plus célèbre des asiles : c&apos;est par l&apos;art que nous souhaitons exalter les sens de nos patients. </p>
-
+          <p className="mt-8 mx-32 text-white text-center text-lg">Notre association souhaite promouvoir les arts nouveaux qu&apos;ils soient sonores ou visuels. Le collectif constitué d&apos;ingénieurs, de graphistes, de développeurs ou scénographes nous permet des approches transversales et novatrices d&apos;événements. Car il n&apos;y a pas plus ennuyeux qu&apos;une nuit sans folie, le nom du collectif s&apos;inspire du plus célèbre des asiles : c&apos;est par l&apos;art que nous souhaitons exalter les sens de nos patients. </p>
         </section>
 
         <section

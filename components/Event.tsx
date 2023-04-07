@@ -17,15 +17,15 @@ interface EventProps {
 export const Event: FunctionComponent<EventProps> = ({ image, title, date, lieu, patients, description }) => {
 
   return (
-    <Tilt className="h-full bg-black/40 rounded-lg backdrop-blur-md border border-white/20 flex flex-col w-[240px] gap-2 text-white">
+    <Tilt className="h-full bg-black/60 rounded-lg backdrop-blur-md border border-white/20 flex flex-col w-[240px] gap-2 text-white">
       <Image src={image} alt="event1" width="240" height="240" className="rounded-t-lg"/>
       <h3 className="text-left font-semibold text-2xl mx-2">{title}</h3> 
       <h4 className="text-left text-lg mx-2">{date}</h4>
-      <p className="text-justify mx-2">
+      <p className="mx-2">
         {lieu}<br/>
         {patients} patients
       </p>
-      <p className="text-justify mx-2 mb-4">{description}</p>
+      <p className="mx-2 mb-4">{description}</p>
     </Tilt>
   );
 };
