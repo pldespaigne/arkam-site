@@ -1,8 +1,8 @@
 
-import { NextPage } from "next";
-import Image from "next/image";
-import { PolesLayout } from "../../components/PolesLayout";
-import { ResidentsCard } from "../../components/ResidentsCard";
+import { NextPage } from 'next';
+
+import { PolesLayout } from '@arkam/components/PolesLayout';
+import { ResidentsCard } from '@arkam/components/ResidentsCard';
 
 
 const Residents: NextPage = () => {

@@ -1,7 +1,9 @@
 
-import Image from "next/image";
-import { FunctionComponent } from "react";
-import { Tilt } from "./Tilt";
+import Image from 'next/image';
+import { FunctionComponent } from 'react';
+
+import { Tilt } from '@arkam/components/Tilt';
+
 
 interface EventProps {
   image: string;

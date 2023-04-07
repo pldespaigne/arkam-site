@@ -1,8 +1,7 @@
 
-import Image from "next/image";
-import { FunctionComponent, ReactNode } from "react";
+import { FunctionComponent, ReactNode } from 'react';
 
-import { Tilt } from "./Tilt";
+import { Tilt } from '@arkam/components/Tilt';
 
 
 interface ProjectProps {

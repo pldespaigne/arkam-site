@@ -1,6 +1,6 @@
 
-import { motion, useMotionValue, useTransform } from "framer-motion";
-import { FunctionComponent, PointerEvent, ReactNode, useState } from "react";
+import { FunctionComponent, PointerEvent, ReactNode } from 'react';
+import { motion, useMotionValue, useTransform } from 'framer-motion';
 
 
 interface TiltProps {

@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import { FunctionComponent, ReactNode } from 'react';
 
+
 interface TitleProps {
   className?: string;
   children?: ReactNode;

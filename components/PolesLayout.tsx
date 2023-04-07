@@ -1,8 +1,9 @@
-import { faFacebook, faInstagram, faSoundcloud } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Image from "next/image";
-import Link from "next/link";
-import { FunctionComponent, ReactNode } from "react";
+import Link from 'next/link';
+import Image from 'next/image';
+import { FunctionComponent, ReactNode } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faInstagram, faSoundcloud } from '@fortawesome/free-brands-svg-icons';
+
 
 interface PolesLayoutProps {
  children: ReactNode;

@@ -1,7 +1,6 @@
 
-import Image from "next/image";
-import Link from "next/link";
-import { FunctionComponent } from "react";
+import Link from 'next/link';
+import { FunctionComponent } from 'react';
 
 
 interface PolesProps {

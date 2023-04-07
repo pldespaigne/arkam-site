@@ -1,16 +1,17 @@
 
-import Link from "next/link";
-import Image from "next/image";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Title } from "../components/Title";
-import { Event } from "../components/Event";
-import { Tilt } from "../components/Tilt";
-import { Project } from "../components/Project";
-import { Poles } from "../components/Poles";
-import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
-import { faFacebook, faInstagram, faSoundcloud } from "@fortawesome/free-brands-svg-icons";
-import { Carousel } from "../components/Carousel";
+import Link from 'next/link';
+import Image from 'next/image';
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook, faInstagram, faSoundcloud } from '@fortawesome/free-brands-svg-icons';
+
+import { Tilt } from '@arkam/components/Tilt';
+import { Title } from '@arkam/components/Title';
+import { Event } from '@arkam/components/Event';
+import { Poles } from '@arkam/components/Poles';
+import { Project } from '@arkam/components/Project';
+import { Carousel } from '@arkam/components/Carousel';
 
 
 export default function Home() {
