@@ -1,6 +1,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
@@ -13,7 +14,13 @@ import { Project } from '@arkam/components/Project';
 import { Carousel } from '@arkam/components/Carousel';
 
 
+
+
 export default function Home() {
+
+  const router = useRouter();
+  const isActive = (value: string) => router.asPath.includes(value);
+
   return (
     <>
       <main className="relative" style={{ fontFamily: 'Futura' }}>
@@ -23,21 +30,21 @@ export default function Home() {
             <p className="font-semibold text-xl">Musical Event and Digital Scenography</p>
           </Link>
           <div className="grow" />
-          <Link href="#evenements" scroll={false} className="hover:underline">Events</Link>
-          <Link href="#projets" scroll={false} className="hover:underline">Projets</Link>
-          <Link href="#poles" scroll={false} className="hover:underline">Pôles</Link>
-          <Link href="#contact" scroll={false} className="hover:underline">Contact</Link>
+          <Link href="#evenements" scroll={false} className={`hover:underline hover:font-bold hover:scale-105 ${ isActive('#evenements') ? 'font-bold' : 'scale-105' }`}>Events</Link>
+          <Link href="#projets" scroll={false} className={`hover:underline hover:font-bold hover:scale-105 ${ isActive('#projets') ? 'font-bold' : 'scale-105' }`}>Projets</Link>
+          <Link href="#poles" scroll={false} className={`hover:underline hover:font-bold hover:scale-105 ${ isActive('#poles') ? 'font-bold' : 'scale-105' }`}>Pôles</Link>
+          <Link href="#contact" scroll={false} className={`hover:underline hover:font-bold hover:scale-105 ${ isActive('#contact') ? 'font-bold' : 'scale-105' }`}>Contact</Link>
         </header>
 
 
         <footer className="fixed inset-x-0 z-10 bottom-0 text-white flex flex-row justify-center gap-8 bg-black/10 backdrop-blur-lg px-40 py-4 border-b border-b-white/20">
-          <Link href="https://www.facebook.com/ARKAMLILLE/" target="_blank" rel="noreferrer">
+          <Link href="https://www.facebook.com/ARKAMLILLE/" target="_blank" rel="noreferrer" className="hover:text-white/60">
             <FontAwesomeIcon icon={faFacebook} size="2x" />
           </Link>
-          <Link href="https://www.instagram.com/arkamrecords/" target="_blank" rel="noreferrer">
+          <Link href="https://www.instagram.com/arkamrecords/" target="_blank" rel="noreferrer" className="hover:text-white/60">
             <FontAwesomeIcon icon={faInstagram} size="2x" />
           </Link>
-          <Link href="https://soundcloud.com/arkamrecords" target="_blank" rel="noreferrer">
+          <Link href="https://soundcloud.com/arkamrecords" target="_blank" rel="noreferrer" className="hover:text-white/60">
             <FontAwesomeIcon icon={faSoundcloud} size="2x" />
           </Link>
         </footer>
@@ -60,17 +67,17 @@ export default function Home() {
           </Link>
         </section>
 
-        <section id="asso" className="bg-black px-40 pt-32 pb-44 text-white">
+        <section id="asso" className="bg-black px-40 pt-32 pb-24 text-white">
           <Title>L&apos;association</Title>
           <p className="mt-8 mx-32 text-white text-center text-lg">Notre association souhaite promouvoir les arts nouveaux qu&apos;ils soient sonores ou visuels. Le collectif constitué d&apos;ingénieurs, de graphistes, de développeurs ou scénographes nous permet des approches transversales et novatrices d&apos;événements. Car il n&apos;y a pas plus ennuyeux qu&apos;une nuit sans folie, le nom du collectif s&apos;inspire du plus célèbre des asiles : c&apos;est par l&apos;art que nous souhaitons exalter les sens de nos patients. </p>
         </section>
 
         <section
           id="evenements"
-          className="relative h-screen bg-black pt-16 pb-24 bg-conver bg-center bg-no-repeat flex flex-col "
+          className="relative h-screen bg-black pt-24 bg-conver bg-center bg-no-repeat flex flex-col "
           style={{ backgroundImage: 'linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 30%), linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 30%), url("/images/hero 2.jpg")' }}
         >
-          <Title className="px-40">Evènements</Title>
+          <Title className="px-40 mb-16">Evènements</Title>
 
           <Carousel
             gapWidth={124}
@@ -273,12 +280,12 @@ export default function Home() {
 
         <section
           id="projets"
-          className="bg-black px-40 pt-16 pb-24 text-white bg-conver bg-center bg-no-repeat"
+          className="bg-black px-40 pt-32 pb-16 text-white bg-conver bg-center bg-no-repeat"
           style={{ backgroundImage: 'linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 30%), linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 30%), url("/images/hero.jpg")' }}
         >
-          <Title>Projets</Title>
+          <Title className="mt-20">Projets</Title>
 
-          <div className="flex flex-row gap-8 mt-16">
+          <div className="flex flex-row gap-32 mt-32">
 
             <Project
               patients="50"
@@ -288,13 +295,13 @@ export default function Home() {
               lieu="Cinéma l'Unisvers (Lille)"
               description="Semaine de résidence artistique audiovisuelle au cinéma l'Univers. Exposition d'installations vidéo interactives, audio réactives."
             >
-              <span className="inline-block px-2 py-0.5 bg-white/20 hover:bg-white/40 rounded-full border border-white/20">Cinéma l&apos;Univers</span>
-              <span className="inline-block px-2 py-0.5 bg-white/20 hover:bg-white/40 rounded-full border border-white/20">Jules Huvig</span>
-              <span className="inline-block px-2 py-0.5 bg-white/20 hover:bg-white/40 rounded-full border border-white/20">Simon Cauwelier</span>
-              <span className="inline-block px-2 py-0.5 bg-white/20 hover:bg-white/40 rounded-full border border-white/20">Paul Gracia</span>
-              <span className="inline-block px-2 py-0.5 bg-white/20 hover:bg-white/40 rounded-full border border-white/20">Rimak Frimakry</span>
-              <span className="inline-block px-2 py-0.5 bg-white/20 hover:bg-white/40 rounded-full border border-white/20">Thomas Chevalier</span>
-              <span className="inline-block px-2 py-0.5 bg-white/20 hover:bg-white/40 rounded-full border border-white/20">Trickart</span>
+              <span className="cursor-default inline-block px-2 py-0.5 bg-white/20 hover:bg-white/40 rounded-full border border-white/20">Cinéma l&apos;Univers</span>
+              <span className="cursor-default inline-block px-2 py-0.5 bg-white/20 hover:bg-white/40 rounded-full border border-white/20">Jules Huvig</span>
+              <span className="cursor-default inline-block px-2 py-0.5 bg-white/20 hover:bg-white/40 rounded-full border border-white/20">Simon Cauwelier</span>
+              <span className="cursor-default inline-block px-2 py-0.5 bg-white/20 hover:bg-white/40 rounded-full border border-white/20">Paul Gracia</span>
+              <span className="cursor-default inline-block px-2 py-0.5 bg-white/20 hover:bg-white/40 rounded-full border border-white/20">Rimak Frimakry</span>
+              <span className="cursor-default inline-block px-2 py-0.5 bg-white/20 hover:bg-white/40 rounded-full border border-white/20">Thomas Chevalier</span>
+              <span className="cursor-default inline-block px-2 py-0.5 bg-white/20 hover:bg-white/40 rounded-full border border-white/20">Trickart</span>
             </Project>
 
             <Project
@@ -313,7 +320,7 @@ export default function Home() {
         <section id="poles" className="bg-black px-40 pt-16 pb-12 text-white">
           <Title>Pôles</Title>
 
-          <div className="flex flex-row justify-between pt-10">
+          <div className="flex flex-row justify-between pt-32">
             <Poles
               image="/images/residents.jpg"
               nom="Pôle Résidents"
@@ -357,33 +364,32 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" className="bg-black px-40 pt-10 pb-16 text-white"
+        <section id="contact" className="bg-black px-40 pt-24 pb-16 text-white"
           style={{ backgroundImage: 'linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 30%), linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 30%), url("/images/hero 2.jpg")' }}
         >
           <Title>Contact</Title>
 
-          <p className="bg-black/20 rounded-lg backdrop-blur-md text-lg text-center mt-16">
+          <p className="bg-black/30 rounded-lg backdrop-blur-md text-lg text-center mt-32 py-4">
             Vous êtes intéressés par notre association, vous souhaitez nous rejoindre, ou vous aimeriez nous produire, rien de plus simple, contactez-nous !
           </p>
 
           <div className="flex flex-row justify-center">
-            <Link href="mailto:contact.arkam@gmail.com" target="_blank" rel="noreferrer" className="mt-16 text-white border font-semibold border-white/40 rounded-md bg-black/50 backdrop-blur-lg flex flex-row items-center gap-3 px-8 py-4 hover:bg-white/10 hover:scale-105 uppercase">
+            <Link href="mailto:contact.arkam@gmail.com" target="_blank" rel="noreferrer" className="mt-16 text-white border font-semibold border-white/40 rounded-md bg-black/60 backdrop-blur-lg flex flex-row items-center gap-3 px-8 py-4 hover:bg-white/10 hover:scale-105 uppercase">
               <span>Contactez nous</span>
               <FontAwesomeIcon icon={faPaperPlane} />
             </Link>
           </div>
 
-          <div className="flex flex-row justify-center gap-10 mt-16">
-
-            <Link href="https://www.facebook.com/ARKAMLILLE/" target="_blank" rel="noreferrer">
+          <div className="flex flex-row justify-center gap-16 mt-16">
+            <Link href="https://www.facebook.com/ARKAMLILLE/" target="_blank" rel="noreferrer" className="hover:text-white/60">
               <FontAwesomeIcon icon={faFacebook} size="4x" />
             </Link>
 
-            <Link href="https://www.instagram.com/arkamrecords/" target="_blank" rel="noreferrer">
+            <Link href="https://www.instagram.com/arkamrecords/" target="_blank" rel="noreferrer" className="hover:text-white/60">
               <FontAwesomeIcon icon={faInstagram} size="4x" />
             </Link>
 
-            <Link href="https://soundcloud.com/arkamrecords" target="_blank" rel="noreferrer">
+            <Link href="https://soundcloud.com/arkamrecords" target="_blank" rel="noreferrer" className="hover:text-white/60">
               <FontAwesomeIcon icon={faSoundcloud} size="4x" />
             </Link>
           </div>
@@ -392,7 +398,7 @@ export default function Home() {
 
         <section className="bg-black text-white px-40 pt-8 pb-24">
 
-          <p className="text-center text-xl mt-8">Notre association compte sur vous !</p>
+          <p className="text-center text-xl mt-8">Notre association compte sur vous ?</p>
 
           <div className="flex flex-row justify-center">
             <Link href="https://www.helloasso.com/associations/ark-a-m" target="_blank" rel="noreferrer" className="mt-8 text-white border font-semibold border-white rounded-md bg-black backdrop-blur-lg flex flex-row items-center gap-3 px-8 py-4 hover:bg-white/10 hover:scale-105 uppercase">
@@ -400,9 +406,9 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="flex flex-row justify-center mt-8">
+          <Link href="/" className="flex flex-row justify-center mt-8" onClick={() => window.scrollTo({ top: 0 })}>
             <Image src="/logo.png" width="80" height="80" alt="Arkam Logo" />
-          </div>
+          </Link>
 
         </section>
       </main>

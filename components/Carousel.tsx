@@ -63,28 +63,30 @@ export const Carousel: FunctionComponent<CarouselProps> = ({ elements, elementWi
 
       </div>
 
-      <div className="flex flex-row justify-center gap-2">
-        {
-          elements.map((_, index) =>
-            <button
-              key={index}
-              onClick={() => handleClick(index)}
-              className={`rounded-full w-3 h-3 ${ count === index ? 'bg-white' : 'bg-white/20 hover:bg-white/50' }`}
-            />
-          )
-        }
+      <div className="flex flex-row justify-center">
+        <div className="flex flex-row justify-center gap-2 bg-black/60 backdrop-blur-md border border-white/20 rounded-full px-4 py-2">
+          {
+            elements.map((_, index) =>
+              <button
+                key={index}
+                onClick={() => handleClick(index)}
+                className={`rounded-full w-3 h-3 ${ count === index ? 'bg-white' : 'bg-white/20 hover:bg-white/80' }`}
+              />
+            )
+          }
+        </div>
       </div>
 
       <button
         onClick={handleLeft}
-        className="absolute z-10 left-2 top-1/2 bg-black/40 border border-white/20 text-white/80 rounded-full leading-3 px-2.5 py-2 backdrop-blur-sm hover:bg-white/20"
+        className="absolute z-10 left-2 top-1/2 bg-black/60 border border-white/20 text-white rounded-full leading-3 px-2.5 py-2 backdrop-blur-sm hover:bg-white/20"
       >
         <FontAwesomeIcon icon={faArrowLeft} size="2x" />
       </button>
 
       <button
         onClick={handleRight}
-        className="absolute z-10 right-2 top-1/2 bg-black/40 border border-white/20 text-white/80 rounded-full leading-3 px-2.5 py-2 backdrop-blur-sm hover:bg-white/20"
+        className="absolute z-10 right-2 top-1/2 bg-black/60 border border-white/20 text-white rounded-full leading-3 px-2.5 py-2 backdrop-blur-sm hover:bg-white/20"
       >
         <FontAwesomeIcon icon={faArrowRight} size="2x" />
       </button>

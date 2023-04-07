@@ -17,7 +17,7 @@ interface ProjectProps {
 export const Project: FunctionComponent<ProjectProps> = ({ image, title, date, lieu, patients, description, children }) => {
 
   return (
-    <Tilt className="bg-black/40 rounded-lg backdrop-blur-md border border-white/20 flelx flex-col gap-2 w-1/2" angle="6">
+    <Tilt className="bg-black/60 rounded-lg backdrop-blur-md border border-white/20 flelx flex-col gap-2 w-1/2" angle="6">
       <div className="rounded-t-md w-full h-80 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url("${image}")` }} />
 
       <h3 className="px-4 mt-2 text-2xl">{title}</h3>
