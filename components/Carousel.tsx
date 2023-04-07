@@ -6,13 +6,18 @@ import { FunctionComponent, ReactNode, useEffect, useRef, useState } from 'react
 
 interface CarouselProps {
   elements: ReactNode[];
-  elementWidth: number;
-  gapWidth: number;
+  elementWidth: [number, number];
+  gapWidth: [number, number];
 };
 
 export const Carousel: FunctionComponent<CarouselProps> = ({ elements, elementWidth, gapWidth }) => {
 
   const ref = useRef<HTMLDivElement>(null);
+  const [i, setI] = useState(0);
+  useEffect(() => {
+    setI(window.innerWidth < 768 ? 0 : 1);
+  }, []);
+
 
   const [ count, setCount ] = useState(0);
   const [ scroll, setScroll ] = useState(0);
@@ -31,7 +36,7 @@ export const Carousel: FunctionComponent<CarouselProps> = ({ elements, elementWi
       return;
     }
     setCount(c - 1);
-    setScroll((c - 1) * (elementWidth + gapWidth));
+    setScroll((c - 1) * (elementWidth[i] + gapWidth[i]));
   };
   
   const handleRight = () => {
@@ -43,17 +48,17 @@ export const Carousel: FunctionComponent<CarouselProps> = ({ elements, elementWi
       return;
     }
     setCount(c + 1);
-    setScroll((c + 1) * (elementWidth + gapWidth));
+    setScroll((c + 1) * (elementWidth[i] + gapWidth[i]));
   };
   
   const handleClick = (index: number) => {
     setCount(index);
-    setScroll(index * (elementWidth + gapWidth));
+    setScroll(index * (elementWidth[i] + gapWidth[i]));
   };
 
   return (
     <div className="relative">
-      <div ref={ref} className="flex flex-row justify-between mt-16 shrink-0 overflow-x-hidden" style={{ scrollBehavior: 'smooth', gap: gapWidth, paddingLeft: `${gapWidth}px`, paddingRight: `${gapWidth}px` }}>
+      <div ref={ref} className="flex flex-row justify-between mt-16 shrink-0 overflow-x-scroll md:overflow-x-hidden" style={{ scrollBehavior: 'smooth', gap: gapWidth[i], paddingLeft: `${gapWidth[i]}px`, paddingRight: `${gapWidth[i]}px` }}>
         
         {
           elements.map((element, index) =>
@@ -64,7 +69,7 @@ export const Carousel: FunctionComponent<CarouselProps> = ({ elements, elementWi
       </div>
 
       <div className="flex flex-row justify-center">
-        <div className="flex flex-row justify-center gap-2 bg-black/60 backdrop-blur-md border border-white/20 rounded-full px-4 py-2">
+        <div className="flex flex-row justify-center gap-0.5 md:gap-2 bg-black/60 backdrop-blur-md border border-white/20 rounded-full px-4 py-2">
           {
             elements.map((_, index) =>
               <button

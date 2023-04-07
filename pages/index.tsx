@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faInstagram, faSoundcloud } from '@fortawesome/free-brands-svg-icons';
@@ -24,20 +24,23 @@ export default function Home() {
   return (
     <>
       <main className="relative" style={{ fontFamily: 'Futura' }}>
-        <header className="fixed inset-x-0 z-10 text-white flex flex-row items-center gap-4 bg-black/60 backdrop-blur-lg px-40 py-4 border-b border-b-white/20">
-          <Link href="/" className="flex items-center gap-4" onClick={() => window.scrollTo({ top: 0 })}>
+        <header className="fixed w-screen z-10 text-white flex flex-row justify-between md:justify-start items-center gap-4 bg-black/60 backdrop-blur-lg md:px-40 md:py-4 border-b border-b-white/20">
+          <Link href="/" className="pl-4 md:pl-0 flex items-center gap-4" onClick={() => window.scrollTo({ top: 0 })}>
             <Image src="/logo.png" width="46" height="46" alt="Arkam Logo" />
-            <p className="font-semibold text-xl">Musical Event and Digital Scenography</p>
+            {/* <p className="font-semibold md:text-xl">Musical Event and Digital Scenography</p> */}
           </Link>
-          <div className="grow" />
-          <Link href="#evenements" scroll={false} className={`hover:underline hover:font-bold hover:scale-105 ${ isActive('#evenements') ? 'font-bold' : 'scale-105' }`}>Events</Link>
-          <Link href="#projets" scroll={false} className={`hover:underline hover:font-bold hover:scale-105 ${ isActive('#projets') ? 'font-bold' : 'scale-105' }`}>Projets</Link>
-          <Link href="#poles" scroll={false} className={`hover:underline hover:font-bold hover:scale-105 ${ isActive('#poles') ? 'font-bold' : 'scale-105' }`}>Pôles</Link>
-          <Link href="#contact" scroll={false} className={`hover:underline hover:font-bold hover:scale-105 ${ isActive('#contact') ? 'font-bold' : 'scale-105' }`}>Contact</Link>
+          <button className="md:hidden px-6 py-6">
+            <FontAwesomeIcon icon={faBars} />
+          </button>
+          <div className="hidden md:block grow" />
+          <Link href="#evenements" scroll={false} className={`hidden md:block hover:underline hover:font-bold hover:scale-105 ${ isActive('#evenements') ? 'font-bold' : 'scale-105' }`}>Events</Link>
+          <Link href="#projets" scroll={false} className={`hidden md:block hover:underline hover:font-bold hover:scale-105 ${ isActive('#projets') ? 'font-bold' : 'scale-105' }`}>Projets</Link>
+          <Link href="#poles" scroll={false} className={`hidden md:block hover:underline hover:font-bold hover:scale-105 ${ isActive('#poles') ? 'font-bold' : 'scale-105' }`}>Pôles</Link>
+          <Link href="#contact" scroll={false} className={`hidden md:block hover:underline hover:font-bold hover:scale-105 ${ isActive('#contact') ? 'font-bold' : 'scale-105' }`}>Contact</Link>
         </header>
 
 
-        <footer className="fixed inset-x-0 z-10 bottom-0 text-white flex flex-row justify-center gap-8 bg-black/10 backdrop-blur-lg px-40 py-4 border-b border-b-white/20">
+        <footer className="fixed w-screen z-10 bottom-0 text-white flex flex-row justify-around md:justify-center gap-8 bg-black/10 backdrop-blur-lg md:px-40 py-4 border-b border-b-white/20">
           <Link href="https://www.facebook.com/ARKAMLILLE/" target="_blank" rel="noreferrer" className="hover:text-white/60">
             <FontAwesomeIcon icon={faFacebook} size="2x" />
           </Link>
@@ -55,8 +58,8 @@ export default function Home() {
         >
 
           <div className="px-8 pt-4 pb-6 bg-black/60 rounded-lg backdrop-blur-sm border border-white/20">
-            <h1 className="text-9xl uppercase text-white font-extrabold">Musical Events</h1>
-            <h2 className="text-right font-semibold text-5xl text-white">and Digital Scenography</h2>
+            <h1 className="md:text-9xl uppercase text-white font-extrabold">Musical Events</h1>
+            <h2 className="text-right font-semibold md:text-5xl text-white">and Digital Scenography</h2>
             <div className="border-b border-white pt-6" />
             <p className="mt-6 text-white text-center text-xl">Arkam est une association de loi 1901 créée en 2017 par des adeptes de musique, d&apos;art visuel et de nouvelles technologies.</p>
           </div>
@@ -67,7 +70,7 @@ export default function Home() {
           </Link>
         </section>
 
-        <section id="asso" className="bg-black px-40 pt-32 pb-24 text-white">
+        <section id="asso" className="bg-black md:px-40 pt-32 pb-24 text-white">
           <Title>L&apos;association</Title>
           <p className="mt-8 mx-32 text-white text-center text-lg">Notre association souhaite promouvoir les arts nouveaux qu&apos;ils soient sonores ou visuels. Le collectif constitué d&apos;ingénieurs, de graphistes, de développeurs ou scénographes nous permet des approches transversales et novatrices d&apos;événements. Car il n&apos;y a pas plus ennuyeux qu&apos;une nuit sans folie, le nom du collectif s&apos;inspire du plus célèbre des asiles : c&apos;est par l&apos;art que nous souhaitons exalter les sens de nos patients. </p>
         </section>
@@ -77,11 +80,11 @@ export default function Home() {
           className="relative h-screen bg-black pt-24 bg-conver bg-center bg-no-repeat flex flex-col "
           style={{ backgroundImage: 'linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 30%), linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 30%), url("/images/hero 2.jpg")' }}
         >
-          <Title className="px-40 mb-16">Evènements</Title>
+          <Title className="md:px-40 mb-16">Evènements</Title>
 
           <Carousel
-            gapWidth={124}
-            elementWidth={240}
+            gapWidth={[32, 124]}
+            elementWidth={[240, 240]}
             elements={[
               <Event
                 key={0}
@@ -280,12 +283,12 @@ export default function Home() {
 
         <section
           id="projets"
-          className="bg-black px-40 pt-32 pb-16 text-white bg-conver bg-center bg-no-repeat"
+          className="bg-black md:px-40 pt-32 pb-16 text-white bg-conver bg-center bg-no-repeat"
           style={{ backgroundImage: 'linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 30%), linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 30%), url("/images/hero.jpg")' }}
         >
           <Title className="mt-20">Projets</Title>
 
-          <div className="flex flex-row gap-32 mt-32">
+          <div className="flex flex-row md:gap-32 mt-32">
 
             <Project
               patients="50"
@@ -317,7 +320,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="poles" className="bg-black px-40 pt-16 pb-12 text-white">
+        <section id="poles" className="bg-black md:px-40 pt-16 pb-12 text-white">
           <Title>Pôles</Title>
 
           <div className="flex flex-row justify-between pt-32">
@@ -364,7 +367,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" className="bg-black px-40 pt-24 pb-16 text-white"
+        <section id="contact" className="bg-black md:px-40 pt-24 pb-16 text-white"
           style={{ backgroundImage: 'linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 30%), linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 30%), url("/images/hero 2.jpg")' }}
         >
           <Title>Contact</Title>
@@ -396,7 +399,7 @@ export default function Home() {
 
         </section>
 
-        <section className="bg-black text-white px-40 pt-8 pb-24">
+        <section className="bg-black text-white md:px-40 pt-8 pb-24">
 
           <p className="text-center text-xl mt-8">Notre association compte sur vous ?</p>
 
