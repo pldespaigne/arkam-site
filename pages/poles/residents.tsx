@@ -89,7 +89,7 @@ const Residents: NextPage = () => {
           />
 
           <ResidentsCard
-            faceDj="/images/fab.png"
+            faceDj="/images/Fab.png"
             nomDj="TeseracT"
             styleMusic="Euphoric Frenchcore"
             influence="Influences : Sefa, Dr. Peacok, Rayvolt, Crypton"
