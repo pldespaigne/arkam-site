@@ -84,7 +84,7 @@ export const Carousel: FunctionComponent<CarouselProps> = ({ elements, elementWi
 
       <button
         onClick={handleLeft}
-        className="absolute z-10 left-2 top-1/2 bg-black/60 border border-white/20 text-white rounded-full leading-3 px-2.5 py-2 backdrop-blur-sm hover:bg-white/20"
+        className="absolute z-0 left-2 top-1/2 bg-black/60 border border-white/20 text-white rounded-full leading-3 px-2.5 py-2 backdrop-blur-sm hover:bg-white/20"
       >
         <FontAwesomeIcon icon={faArrowLeft} size="2x" className="hidden md:block" />
         <FontAwesomeIcon icon={faArrowLeft} size="1x" className="block md:hidden" />
@@ -92,7 +92,7 @@ export const Carousel: FunctionComponent<CarouselProps> = ({ elements, elementWi
 
       <button
         onClick={handleRight}
-        className="absolute z-10 right-2 top-1/2 bg-black/60 border border-white/20 text-white rounded-full leading-3 px-2.5 py-2 backdrop-blur-sm hover:bg-white/20"
+        className="absolute z-0 right-2 top-1/2 bg-black/60 border border-white/20 text-white rounded-full leading-3 px-2.5 py-2 backdrop-blur-sm hover:bg-white/20"
       >
         <FontAwesomeIcon icon={faArrowRight} size="2x" className="hidden md:block" />
         <FontAwesomeIcon icon={faArrowRight} size="1x" className="block md:hidden" />
