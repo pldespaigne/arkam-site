@@ -2,7 +2,7 @@
 import { NextPage } from 'next';
 
 import { Head } from '@arkam/components/Head';
-import { PolesLayout } from '@arkam/components/PolesLayout';
+import { Layout } from '@arkam/components/Layout';
 import { ResidentsCard } from '@arkam/components/ResidentsCard';
 
 
@@ -11,12 +11,12 @@ const Residents: NextPage = () => {
   return (
     <>
       <Head />
-      <PolesLayout>
+      <Layout brandText="Musical Event and Digital Events">
         <section className="bg-black min-h-screen relative py-32">
-          <div style={{ backgroundImage: 'url("/logo.png")' }} className="z-0 bg-center bg-contain bg-no-repeat absolute inset-0 opacity-5"/>    
+          <div style={{ backgroundImage: 'url("/logo.png")' }} className="z-0 fixed bg-center bg-contain bg-no-repeat inset-0 opacity-5"/>    
           
-          <div className="flex flex-row gap-2 mt-10 mx-40">
-            <h1 className="text-white font-semibold text-5xl whitespace-nowrap">Pôle Résidents</h1>
+          <div className="flex flex-row gap-2 mt-6 md:-10 mx-4 md:mx-40">
+            <h1 className="text-white font-semibold text-2xl md:text-5xl whitespace-nowrap">Pôle Résidents</h1>
             <div className="w-full mb-2 border-b border-white"/>
           </div>
         
@@ -95,11 +95,11 @@ const Residents: NextPage = () => {
             influence="Influences : Sefa, Dr. Peacok, Rayvolt, Crypton"
             descriptionDj="► Le plus ancien d’entre nous a forcément une vision plus globale de la musique électronique. Il gomme les écarts générationnels au travers de son set, et ce n’est pas les drops qu’il lâche qui diront le contraire. Il puise son inspiration d’un objet en 4 dimensions, TesseracT vous fera voyager de l’origine de la techno à la hard techno actuelle. Un voyage temporel pour vos oreilles et vos pieds qui n’arrêteront pas de gesticuler."
             boutonMusic="https://on.soundcloud.com/sCZqG"
-            texteBouton="J'écoute un set de Dr Watzamm"
+            texteBouton="J'écoute un set de Tesseract"
             instagram="https://www.instagram.com/tesseract_arkam/"
           />
         </section>
-      </PolesLayout>
+      </Layout>
     </>
   );
 };
